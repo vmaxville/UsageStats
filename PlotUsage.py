@@ -1,11 +1,16 @@
-f = open("jobcount3.txt","r")
+import csv
+
+f = open("jobcount3.csv","r")
+csv_f = csv.reader(f)
+
 usageList = []
-for line in f:
+
+for line in csv_f:
     usageList.append(line)
 print("Have read in file...");
-print(usageList[0][0])
+print(usageList[0])
 print("Now trying to print out with a loop...")
-'''for a in usageList:
+for a in usageList:
     print(a)
-'''
+
 f.close()
